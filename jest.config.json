@@ -1,0 +1,8 @@
+{
+  "globals": {},
+  "moduleNameMapper": {},
+  "moduleDirectories": ["test", "node_modules"],
+  "moduleFileExtensions": ["js", "ts"],
+  "preset": "ts-jest",
+  "testEnvironment": "node"
+}
