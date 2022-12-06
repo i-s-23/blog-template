@@ -6,7 +6,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint './{bin,lib,src,pages,tests}/**/*.{ts,tsx}' --max-warnings=0",
     "typecheck": "tsc",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css,scss}'",
     "test": "jest"
