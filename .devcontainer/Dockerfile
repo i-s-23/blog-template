@@ -1,2 +1,2 @@
-ARG VARIANT=16-bullseye
-FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:0-${VARIANT}
+FROM node:bullseye
+RUN npm install -g npm@10.2.0 npm@9.6.3 wrangler
