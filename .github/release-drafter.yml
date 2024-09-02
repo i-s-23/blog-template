@@ -10,8 +10,6 @@ categories:
       - 'fix'
       - 'bugfix'
       - 'bug'
-  - title: '🧰 Maintenance'
-    label: 'chore'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&'
 version-resolver:
@@ -37,12 +35,7 @@ autolabeler:
   - label: chore
     branch:
       - '/^chore[/-].+/'
-  - label: refactor
-    branch:
-      - '/(refactor|refactoring)[/-].+/'
   - label: documentation
-    branch:
-      - '/doc(umentation)[/-].+/'
     files:
       - '*.md'
   - label: ''enhancement'
