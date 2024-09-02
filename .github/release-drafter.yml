@@ -1,50 +1,47 @@
 name-template: 'v$RESOLVED_VERSION 🌈'
 tag-template: 'v$RESOLVED_VERSION'
 categories:
-  - title: '🚀 Features'
-    labels:
-      - 'feature'
-      - 'enhancement'
-  - title: '🐛 Bug Fixes'
-    labels:
-      - 'fix'
-      - 'bugfix'
-      - 'bug'
-  - title: '🧰 Maintenance'
-    label: 'chore'
+- title: '🚀 Features'
+  labels:
+  - 'feature'
+  - 'enhancement'
+- title: '🐛 Bug Fixes'
+  labels:
+  - 'fix'
+  - 'bugfix'
+  - 'bug'
+  - 'dependencies'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&'
 version-resolver:
   major:
     labels:
-      - 'major'
+    - 'major'
   minor:
     labels:
-      - 'minor'
+    - 'minor'
   patch:
     labels:
-      - 'patch'
+    - 'patch'
   default: patch
+include-labels:
+- 'enhancement'
+- 'dependencies'
 template: |
   ## Changes
 
   $CHANGES
 
 autolabeler:
-  - label: bug
-    branch:
-      - '/^fix[/-].+/'
-  - label: chore
-    branch:
-      - '/^chore[/-].+/'
-  - label: refactor
-    branch:
-      - '/(refactor|refactoring)[/-].+/'
-  - label: documentation
-    branch:
-      - '/doc(umentation)[/-].+/'
-    files:
-      - '*.md'
-  - label: ''enhancement'
-    branch:
-      - '/(enhancement|feature)[/-].+/'
+- label: bug
+  branch:
+  - '/^fix[/-].+/'
+- label: chore
+  branch:
+  - '/^chore[/-].+/'
+- label: documentation
+  files:
+  - '*.md'
+- label: enhancement
+  branch:
+  - '/(enhancement|feature)[/-].+/'
