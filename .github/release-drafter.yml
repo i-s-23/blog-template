@@ -42,6 +42,6 @@ autolabeler:
 - label: documentation
   files:
   - '*.md'
-- label: ''enhancement'
+- label: enhancement
   branch:
   - '/(enhancement|feature)[/-].+/'
