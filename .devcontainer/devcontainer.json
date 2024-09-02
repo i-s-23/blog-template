@@ -1,32 +1,31 @@
 {
   "name": "blog template with next.js",
   "build": {
-    "dockerfile": "Dockerfile",
+    "dockerfile": "../Dockerfile",
     "args": {
       "VARIANT": "18-buster"
     }
   },
   "runArgs": ["--env-file", ".env"],
-  "settings": {
-    "files.exclude": {
-      "**/node_modules": true
-    },
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
-    },
-    "[markdown]": {
-      "files.trimTrailingWhitespace": false
-    }
-  },
   "customizations": {
     "vscode": {
-      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+      "settings": {
+        "files.exclude": {
+          "**/node_modules": true
+        },
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true
+        },
+        "[markdown]": {
+          "files.trimTrailingWhitespace": false
+        }
+      },
+      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode","GitHub.vscode-pull-request-github"]
     }
   },
-  "remoteUser": "node",
   "features": {
     "github-cli": "latest"
   }
