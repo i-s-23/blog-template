@@ -10,6 +10,7 @@ categories:
   - 'fix'
   - 'bugfix'
   - 'bug'
+  - 'dependencies'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&'
 version-resolver:
@@ -25,6 +26,7 @@ version-resolver:
   default: patch
 include-labels:
 - 'enhancement'
+- 'dependencies'
 template: |
   ## Changes
 
